@@ -1,7 +1,7 @@
 baseURL = ""
 # title = "Hugo Themes"
 author = "Steve Francia"
-copyright = "Copyright © 2008–2019, Steve Francia and the lee.so; all rights reserved."
+copyright = "Copyright © {{ .Date }}, Claire Annan and the cannandev logo; all rights reserved."
 paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
@@ -12,17 +12,18 @@ ignoreErrors = ["error-remote-getjson"]
 
 # ------------------------------
 theme = "hugo-paper"
-title = "Paper"
+title = "Claire Annan"
+shortTitle = "@cannandev"
 
 [params]
   color = 'linen'
 
-  twitter = 'nanxiaobei'
-  github = 'nanxiaobei'
-  instagram = 'nan.xiaobei'
+  twitter = 'cannandev'
+  github = 'cannandev'
+  linkedin = 'in/ClaireAnnan'
 
-  avatar = 'nanxiaobei@gmail.com'
-  name = 'Lee'
+  avatar = 'claire.annan.me@gmail.com'
+  name = 'Claire Annan'
   bio = 'Discover fresh context'
 
 # ------------------------------
