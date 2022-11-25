@@ -1,0 +1,28 @@
+{{ define "main" }}
+<!-- hero -->
+{{ partial "avatar.html" . }}
+<!-- $pages -->
+{{ $pages := union .RegularPages .Sections }}
+<!---->
+{{ if .IsHome }}
+<!---->
+{{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+<!---->
+{{ end }}
+
+
+<!-- Articles -->
+{{ $paginator := .Paginate $pages }}
+<section class="relative max-w-3xl mx-auto py-16 px-8">
+  <h2 class="text-4xl tracking-tight font-extrabold text-indigo-700 text-center">Latest articles</h2>
+  {{ range $index, $page := $paginator.Pages }} {{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}{{ end }}
+  <article class="relative my-10 p-6 border rounded-lg hover:border-indigo-400">
+    <h3 class="text-3xl my-0 pb-1 font-extrabold">{{ .Title }}</h3>
+    <time class="text-sm opacity-60">{{ .Date | time.Format ":date_medium" }}</time>
+    <a class="absolute inset-0" href="{{ .Permalink }}"><span class="sr-only">Read this article</span></a>
+  </article>
+  {{ end }} {{ with .Site.GetPage "/posts" }}
+  <a href="{{ .RelPermalink }}" class="btn">See all {{ .Title }}</a> {{ end }}
+</section>
+
+{{ end }}

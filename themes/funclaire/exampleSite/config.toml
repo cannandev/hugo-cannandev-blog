@@ -1,6 +1,7 @@
-baseURL = ""
-author = "Claire Annan"
-copyright = "Copyright © {{ .Date }}, Claire Annan and the cannandev logo; all rights reserved."
+baseURL = "https://hugo-paper.vercel.app/"
+# title = "Hugo Themes"
+author = "Steve Francia"
+copyright = "Copyright © 2008–2019, Steve Francia and the lee.so; all rights reserved."
 paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
@@ -10,22 +11,19 @@ enableInlineShortcodes = true
 ignoreErrors = ["error-remote-getjson"]
 
 # ------------------------------
-theme = "funclaire"
-title = "Claire Annan Blog"
+theme = "hugo-paper"
+title = "Paper"
 
 [params]
   color = 'linen'
 
-  twitter = 'cannandev'
-  github = 'cannandev'
-  linkedin = 'in/ClaireAnnan'
+  twitter = 'nanxiaobei'
+  github = 'nanxiaobei'
+  instagram = 'nan.xiaobei'
 
-  avatar = 'claire.annan.me@gmail.com'
-  name = 'Claire Annan'
-  bio = 'I’m a consulting software engineer. I like to write about engineering best practices and accessibility. I’ve also got lots of stories about life as a developer.'
-
-	shortTitle = "@cannandev"
-	poweredBy = "Powered by Hugo️️"
+  avatar = 'nanxiaobei@gmail.com'
+  name = 'Lee'
+  bio = 'Discover fresh context'
 
 # ------------------------------
 
@@ -34,6 +32,19 @@ title = "Claire Annan Blog"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 10
 
 [taxonomies]
 category = "categories"
