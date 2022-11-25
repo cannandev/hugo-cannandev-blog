@@ -1,8 +1,8 @@
 {
-  "name": "hugo-paper",
-  "version": "6.3.0",
-  "repository": "https://github.com/nanxiaobei/hugo-paper.git",
-  "author": "nanxiaobei <nanxiaobei@gmail.com>",
+  "name": "funclaire",
+  "version": "1.0.0",
+  "repository": "https://github.com/cannandev/hugo.git",
+  "author": "cannandev <claire.annan.me@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
