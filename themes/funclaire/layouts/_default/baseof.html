@@ -51,7 +51,7 @@
 <body class="text-black duration-200 ease-out dark:text-white">
   {{ partial "header.html" . }}
 
-  <main class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert">
+  <main class="relative mx-auto min-h-[calc(100%-10rem)] {{ if not .IsHome }}prose prose-neutral max-w-3xl px-8 {{ end }}pt-20 pb-32 dark:prose-invert">
     {{ block "main" . }}{{ end }}
   </main>
 

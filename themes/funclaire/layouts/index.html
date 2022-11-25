@@ -1,7 +1,6 @@
 {{ define "main" }}
-
-<h1 class="mb-24">Title</h1>
-
+<!-- hero -->
+{{ partialCached "hero.html" . }}
 <!-- $pages -->
 {{ $pages := union .RegularPages .Sections }}
 <!---->
@@ -11,21 +10,19 @@
 <!---->
 {{ end }}
 
-<h2>Latest articles</h2>
 
 <!-- Articles -->
-{{ $paginator := .Paginate $pages }} {{ range $index, $page := $paginator.Pages }}
-<!---->
-
-{{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}{{ end }}
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
-  <h3 class="!my-0 pb-1 !leading-none">{{ .Title }}</h2>
-    <time class="text-sm opacity-60">{{ .Date | time.Format ":date_medium" }}</time>
-    <a class="absolute inset-0" href="{{ .Permalink }}"></a>
-</section>
-{{ end }}
-
-<section>
+{{ $paginator := .Paginate $pages }}
+<section class="relative bg-indigo-700 max-w-7xl mx-auto py-16 px-8">
+  <h2 class="text-4xl tracking-tight font-extrabold text-white text-center">Latest articles</h2>
+  {{ range $index, $page := $paginator.Pages }} {{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}{{ end }}
+  <article class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+    <h3 class="my-0 pb-1 leading-none">{{ .Title }}</h2>
+      <time class="text-sm opacity-60">{{ .Date | time.Format ":date_medium" }}</time>
+      <a class="absolute inset-0" href="{{ .Permalink }}"></a>
+  </article>
+  {{ end }}
   <a href="/posts/" class="btn">See all articles</a>
 </section>
+
 {{ end }}

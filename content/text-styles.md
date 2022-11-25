@@ -40,3 +40,6 @@ I took the liberty of pointing **out to my gentleman** that the whole business l
 
 ## Shortcodes
 
+### figure
+
+### contact form
