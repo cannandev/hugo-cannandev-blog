@@ -1,6 +1,6 @@
 {{ define "main" }}
 <!-- hero -->
-{{ partialCached "hero.html" . }}
+{{ partialCached "avatar.html" . }}
 <!-- $pages -->
 {{ $pages := union .RegularPages .Sections }}
 <!---->
@@ -21,8 +21,8 @@
     <time class="text-sm opacity-60">{{ .Date | time.Format ":date_medium" }}</time>
     <a class="absolute inset-0" href="{{ .Permalink }}"></a>
   </article>
-  {{ end }}
-  <a href="/posts/" class="btn">See all articles</a>
+  {{ end }} {{ with .Site.GetPage "/posts" }}
+  <a href="{{ .RelPermalink }}" class="btn">See all {{ .Title }}</a> {{ end }}
 </section>
 
 {{ end }}

@@ -1,10 +1,10 @@
 {{ $avatar_url := $.Scratch.Get "avatar_url" }}
 <!---->
 {{ if or $avatar_url site.Params.name }}
-<div class="mt-20 mb-4 flex items-start">
+<div class="max-w-3xl mx-auto mt-20 mb-4 flex items-start">
   {{ if $avatar_url }}
   <div class="mr-5 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 shadow-xl dark:bg-white/80">
-    <img class="my-0 h-14 w-14 rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80" src="{{ $avatar_url }}" alt="gravatar for {{ site.Params.name }}" />
+    <img class="my-0 {{ if .IsHome }}h-32 w-32 {{ else }}h-14 w-14 {{ end }}rounded-full !bg-black/5 hover:animate-spin dark:!bg-black/80" src="{{ $avatar_url }}" alt="gravatar for {{ site.Params.name }}" />
   </div>
   {{ end }}
   <!---->
@@ -14,7 +14,8 @@
     <div class="break-words">
       {{ site.Params.bio | default (print "Personal blog by " site.Params.name) }}
     </div>
-    <a href="/about/" class="">Learn more</a>
+    {{ with .Site.GetPage "/about" }}
+    <a href="{{ .RelPermalink }}" class="{{ if .IsHome }}btn {{ end }}">Learn more</a> {{ end }}
   </div>
   {{ end }}
 </div>
