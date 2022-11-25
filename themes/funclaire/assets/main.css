@@ -1230,12 +1230,12 @@ body {
   margin-right: auto;
 }
 
-.ml-6 {
-  margin-left: 1.5rem;
-}
-
 .-mr-8 {
   margin-right: -2rem;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
 }
 
 .mt-3 {
@@ -1266,12 +1266,12 @@ body {
   height: 5rem;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-full {
   height: 100%;
+}
+
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-56 {
@@ -1298,12 +1298,12 @@ body {
   width: 3.5rem;
 }
 
-.w-6 {
-  width: 1.5rem;
-}
-
 .w-\[5rem\] {
   width: 5rem;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .w-full {
