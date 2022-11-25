@@ -6,3 +6,5 @@ menu:
 ---
 
 This is the About page.
+
+Read [testimonials](/testimonials/).

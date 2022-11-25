@@ -1,6 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 company: 18F
+position: Consultant
 weight: 0
 ---
 

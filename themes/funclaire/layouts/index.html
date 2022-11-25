@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<h1 class="mb-24">Title</h1>
+
+<!-- $pages -->
+{{ $pages := union .RegularPages .Sections }}
+<!---->
+{{ if .IsHome }}
+<!---->
+{{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+<!---->
+{{ end }}
+
+<h2>Latest articles</h2>
+
+<!-- Articles -->
+{{ $paginator := .Paginate $pages }} {{ range $index, $page := $paginator.Pages }}
+<!---->
+
+{{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}{{ end }}
+<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
+  <h3 class="!my-0 pb-1 !leading-none">{{ .Title }}</h2>
+    <time class="text-sm opacity-60">{{ .Date | time.Format ":date_medium" }}</time>
+    <a class="absolute inset-0" href="{{ .Permalink }}"></a>
+</section>
+{{ end }}
+
+<section>
+  <a href="/posts/" class="btn">See all articles</a>
+</section>
+{{ end }}
