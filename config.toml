@@ -1,6 +1,5 @@
 baseURL = ""
-# title = "Hugo Themes"
-author = "Steve Francia"
+author = "Claire Annan"
 copyright = "Copyright © {{ .Date }}, Claire Annan and the cannandev logo; all rights reserved."
 paginate = 3
 languageCode = "en"
@@ -11,9 +10,8 @@ enableInlineShortcodes = true
 ignoreErrors = ["error-remote-getjson"]
 
 # ------------------------------
-theme = "hugo-paper"
-title = "Claire Annan"
-shortTitle = "@cannandev"
+theme = "funclaire"
+title = "Claire Annan Blog"
 
 [params]
   color = 'linen'
@@ -24,7 +22,10 @@ shortTitle = "@cannandev"
 
   avatar = 'claire.annan.me@gmail.com'
   name = 'Claire Annan'
-  bio = 'Discover fresh context'
+  bio = 'I’m a consulting software engineer. I like to write about engineering best practices and accessibility. I’ve also got lots of stories about life as a developer.'
+
+	shortTitle = "@cannandev"
+	poweredBy = "Powered by Hugo️️"
 
 # ------------------------------
 
@@ -33,19 +34,6 @@ shortTitle = "@cannandev"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
-[menu]
-
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 10
-  [[menu.main]]
-    identifier = "contact"
-    name = "Contact"
-    url = "/contact/"
-    weight = 10
 
 [taxonomies]
 category = "categories"

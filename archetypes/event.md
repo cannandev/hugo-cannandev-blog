@@ -1,7 +1,10 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
+place:
 date: {{ .Date }}
-draft: true
-category: tutorial
+image:
+	- small:
+	- large:
+category: work
 ---
 
