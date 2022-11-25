@@ -19,7 +19,7 @@
   <article class="relative my-10 p-6 border rounded-lg hover:border-indigo-400">
     <h3 class="text-3xl my-0 pb-1 font-extrabold">{{ .Title }}</h3>
     <time class="text-sm opacity-60">{{ .Date | time.Format ":date_medium" }}</time>
-    <a class="absolute inset-0" href="{{ .Permalink }}"></a>
+    <a class="absolute inset-0" href="{{ .Permalink }}"><span class="sr-only">Read this article</span></a>
   </article>
   {{ end }} {{ with .Site.GetPage "/posts" }}
   <a href="{{ .RelPermalink }}" class="btn">See all {{ .Title }}</a> {{ end }}
