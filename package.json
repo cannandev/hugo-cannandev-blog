@@ -1,0 +1,27 @@
+{
+  "name": "cannandev-hugo",
+  "version": "1.0.0",
+  "description": "Claire Annan blog using Hugo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "hugo serve -D --gc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cannandev/hugo-cannandev-blog.git"
+  },
+  "keywords": [
+    "hugo",
+    "blog",
+    "consulting",
+    "software",
+    "engineering"
+  ],
+  "author": "Claire Annan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cannandev/hugo-cannandev-blog/issues"
+  },
+  "homepage": "https://github.com/cannandev/hugo-cannandev-blog#readme"
+}
